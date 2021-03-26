@@ -13,7 +13,7 @@ function GridRow(props){
             {displayRow.map(square=>(
                 <GridSquare 
                     square={square} 
-                    key={randomRange(1,99999)} 
+                    key={randomRange(1,99999999)} 
                     row={displayRow}
                 />
             ))}

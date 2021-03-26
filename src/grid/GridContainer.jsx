@@ -24,7 +24,7 @@ function GridContainer(props){
         console.log('Grid generated');
     }
 
-    let gridDisplay = [];
+    let displayGrid = [];
     let gridMap = (thisGrid) => {
         let i = 0;
         for(i=0; i<thisGrid.length;i++){
@@ -34,10 +34,10 @@ function GridContainer(props){
                 rowNum: rowNum,
                 rowData: rowData,
             }
-            gridDisplay.push(thisRow);
+            displayGrid.push(thisRow);
         }
         console.log('Grid mapped');
-        console.log('Grid Display: ', gridDisplay);
+        console.log('displayGrid: ', displayGrid);
     }
 
     useEffect(()=>{
@@ -57,7 +57,7 @@ function GridContainer(props){
                 <GridRow 
                     displayRow = {row}
                     // rowNum = {row.rowNum}
-                    key = {randomRange(1,99999)}
+                    key = {randomRange(1,99999999)}
                 />
             ))}
         </div>
