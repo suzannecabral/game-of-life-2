@@ -1,0 +1,35 @@
+.grid-container {
+  width: auto;
+  background-color: navy;
+}
+
+.grid-row {
+  background-color: #286291;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.grid-square {
+  width: 1em;
+  min-width: 1em;
+  height: 1em;
+  min-height: 1em;
+  background-color: #74c2e6;
+  margin: .5px;
+  border: none;
+  cursor: pointer;
+}
+
+.alive {
+  background-color: white;
+}
+
+.false {
+  background-color: black;
+}
+
+.true {
+  background-color: white;
+}
+/*# sourceMappingURL=grid.css.map */
