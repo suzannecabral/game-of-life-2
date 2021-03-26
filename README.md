@@ -1,70 +1,20 @@
-# Getting Started with Create React App
+# Game of Life
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+John Conway's Game of Life (1970)
 
-## Available Scripts
+## What is it?
 
-In the project directory, you can run:
+For a playable example, check out [playgameoflife.com](https://playgameoflife.com/)
 
-### `npm start`
+## So... what is it?
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+It's a Turing-complete cellular automoton. It's a way of modeling data as squares on a grid that updates itself according to a set of rules. Each cell updates itself according to the state of its neighbors. In the Game of Life, each cell turns on or off, its state is called "alive" or "dead".
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Each cell that is left on its own at the end of a "turn" dies
+- Each cell with 2-3 neighbors stays alive
+- Each cell with exactly 3 neighbors comes to life
+- Cells at the edge of the grid are considered dead. This model doesn't wrap around to the far side of the grid.
 
-### `npm test`
+These rules seem simple, but they can lead to some interesting mathematical creatures and geometric patterns that crawl their way across the grid as the turns progress. It's also possible to create infinite patterns that generate "gliders" that shoot across the map. See the [Gosper Glider Gun](https://en.wikipedia.org/wiki/Gun_(cellular_automaton))
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This particular automaton is a staple of tech history, and has been around since 1970, so there is a wealth of information, patterns and theories about it. It has been used for everything from generating music to emulating entire computer systems. Check out [Wikipedia](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life#Examples_of_patterns) for some more patterns to play with, and some of the theory behind them.
