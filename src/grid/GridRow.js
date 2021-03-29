@@ -1,9 +1,8 @@
 import React from 'react';
 import './grid.css';
-import {useState, useEffect} from 'react';
 import { randomRange } from '../utils'
 
-import GridSquare from './GridSquare';
+import GridSquare from './GridSquare.js';
 
 function GridRow(props){
     const {displayRow, rowNum} = props;

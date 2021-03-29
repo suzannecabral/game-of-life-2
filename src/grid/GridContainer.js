@@ -1,9 +1,9 @@
 import React from 'react';
 import './grid.css';
-import {useState, useEffect} from 'react';
+import { useEffect } from 'react';
 import { randomRange } from '../utils'
 
-import GridRow from './GridRow';
+import GridRow from './GridRow.js';
 
 function GridContainer(props){
     const {thisGrid} = props;

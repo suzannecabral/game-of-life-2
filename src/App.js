@@ -1,6 +1,6 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
-import GridContainer from './grid/GridContainer'
+import GridContainer from './grid/GridContainer.js'
 import { randomRange } from './utils'
 
 function App() {
