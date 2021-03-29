@@ -6,22 +6,31 @@ import { randomRange } from '../utils';
 
 function GridSquare(props){
     let {row, square} = props;
-    let squareClasses = 'grid-square';
-    let coords = [row, square]
-
     let squareValue = square;
-    let checkAlive = (square) => {
-        square ? squareClasses='grid-square true' : squareClasses='grid-square false';
+    // let coords = [row, square]
+    let clickToggle = (square) => {
+        // square===0 ? square = 1 : square = 0;
+        if(square==0){
+            square = 1;
+        }else{
+            square = 0;
+        }
     }
 
     const handleClick = (event) => {
         event.preventDefault();
-        checkAlive(square);
-        console.log(coords);
+        clickToggle(square);
+        console.log('row: ', row);
+        console.log('square: ', square);
     }
+
+    // useEffect(()=>{
+    //     setStyles(square);
+    // },[]);
+
     return(
         <button 
-            className={squareClasses} 
+            className={square===0 ? 'grid-square false' : 'grid-square true'} 
             onClick={(event)=>{handleClick(event)}} 
         >
             {squareValue}

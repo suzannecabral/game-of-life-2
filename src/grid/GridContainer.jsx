@@ -17,7 +17,7 @@ function GridContainer(props){
             let thisRow = [];
             //for each square:
             for(let j=0; j<gridSize; j++){
-                thisRow.push(0)
+                thisRow.push(randomRange(0,1))
             }
             grid.push(thisRow)
         }
@@ -37,13 +37,13 @@ function GridContainer(props){
             displayGrid.push(thisRow);
         }
         console.log('Grid mapped');
-        console.log('displayGrid: ', displayGrid);
     }
 
     useEffect(()=>{
         console.log('Grid Initialize Effect');
         gridGen(gridSize);
         setThisGrid(grid);
+        gridMap(thisGrid);
     },[])
 
     // useEffect(()=>{
@@ -56,7 +56,7 @@ function GridContainer(props){
             {thisGrid.map(row=>(
                 <GridRow 
                     displayRow = {row}
-                    // rowNum = {row.rowNum}
+                    rowNum = {row.rowNum}
                     key = {randomRange(1,99999999)}
                 />
             ))}

@@ -15,6 +15,7 @@ function GridRow(props){
                     square={square} 
                     key={randomRange(1,99999999)} 
                     row={displayRow}
+                    rowNum={rowNum}
                 />
             ))}
         </div>
