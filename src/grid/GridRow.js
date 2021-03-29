@@ -7,16 +7,20 @@ import GridSquare from './GridSquare.js';
 function GridRow(props){
     const {displayRow, rowNum} = props;
     
+    let displaySquares = [];
+    displayRow.forEach((square, index) => {
+        displaySquares.push(
+        <GridSquare 
+            square = {square} 
+            key = {randomRange(1,99999999)} 
+            rowNum = {rowNum} 
+            squareNum={index} 
+        />)
+    })
+
     return(
         <div className="grid-row">
-            {displayRow.map(square=>(
-                <GridSquare 
-                    square={square} 
-                    key={randomRange(1,99999999)} 
-                    row={displayRow}
-                    rowNum={rowNum}
-                />
-            ))}
+            {displaySquares}
         </div>
     )
 }

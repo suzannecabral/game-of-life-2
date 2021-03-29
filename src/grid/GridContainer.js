@@ -5,39 +5,23 @@ import { randomRange } from '../utils'
 
 import GridRow from './GridRow.js';
 
+
 function GridContainer(props){
-    const {thisGrid} = props;
-
-    let displayGrid = [];
-
-    let gridMap = (thisGrid) => {
-        let i = 0;
-        for(i=0; i<thisGrid.length;i++){
-            let rowNum = i;
-            let rowData = thisGrid[i];
-            let thisRow = {
-                rowNum: rowNum,
-                rowData: rowData,
-            }
-            displayGrid.push(thisRow);
-        }
-        console.log('Grid mapped');
-    }
-
-    useEffect(()=>{
-        gridMap(thisGrid);
-        console.log('display Grid effect', displayGrid)
-    },[]);
-
+    const {thisGrid, setThisGrid} = props;
+    
+    let displayRows = [];
+    thisGrid.forEach((row, index) => {
+        displayRows.push(
+        <GridRow 
+            displayRow = {row} 
+            key = {randomRange(1,99999999)} 
+            rowNum = {index} 
+        />)
+    })
+    
     return(
         <div className="grid-container">
-            {thisGrid.map(row=>(
-                <GridRow 
-                    displayRow = {row}
-                    // rowNum = {obj.rowNum}
-                    key = {randomRange(1,99999999)}
-                />
-            ))}
+            {displayRows}
         </div>
     );
 }

@@ -33,6 +33,7 @@ function App() {
       <GridContainer 
         gridSize={gridSize}
         thisGrid={thisGrid}
+        setThisGrid={setThisGrid}
       />
     </div>
   );

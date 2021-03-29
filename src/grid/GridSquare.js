@@ -2,7 +2,7 @@ import React from 'react';
 import './grid.css';
 
 function GridSquare(props){
-    let {row, square} = props;
+    let {rowNum, squareNum, square} = props;
     let clickToggle = (square) => {
         if(square===0){
             square = 1;
@@ -15,8 +15,10 @@ function GridSquare(props){
     const handleClick = (event) => {
         event.preventDefault();
         clickToggle(square);
-        console.log('row: ', row);
-        console.log('square: ', square);
+        console.log('row: ', rowNum);
+        console.log('square: ', squareNum);
+        console.log('Value: ', square);
+        console.log('----')
     }
 
     return(
