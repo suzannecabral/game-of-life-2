@@ -1,24 +1,29 @@
 import React from 'react';
 import './grid.css';
+import { deepCopy } from '../utils'
 
 function GridSquare(props){
-    let {rowNum, squareNum, square} = props;
+    let {rowNum, squareNum, square, thisGrid, setThisGrid} = props;
+    let coords = [rowNum, squareNum]
+    
     let clickToggle = (square) => {
+        let newGrid = deepCopy(thisGrid)
         if(square===0){
-            square = 1;
+            newGrid[rowNum][squareNum] = 1;
+            setThisGrid(newGrid);
         }else{
-            square = 0;
+            newGrid[rowNum][squareNum] = 0;
+            setThisGrid(newGrid);
         }
-        console.log('toggled');
+        // console.log('toggled');
     }
 
     const handleClick = (event) => {
         event.preventDefault();
         clickToggle(square);
-        console.log('row: ', rowNum);
-        console.log('square: ', squareNum);
-        console.log('Value: ', square);
-        console.log('----')
+        // console.log('coords: ', coords);
+        // console.log('Value: ', square);
+        // console.log('----')
     }
 
     return(

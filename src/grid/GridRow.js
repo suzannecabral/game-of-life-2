@@ -5,7 +5,7 @@ import { randomRange } from '../utils'
 import GridSquare from './GridSquare.js';
 
 function GridRow(props){
-    const {displayRow, rowNum} = props;
+    const {displayRow, rowNum, thisGrid, setThisGrid} = props;
     
     let displaySquares = [];
     displayRow.forEach((square, index) => {
@@ -15,6 +15,8 @@ function GridRow(props){
             key = {randomRange(1,99999999)} 
             rowNum = {rowNum} 
             squareNum={index} 
+            thisGrid = {thisGrid}
+            setThisGrid = {setThisGrid}
         />)
     })
 

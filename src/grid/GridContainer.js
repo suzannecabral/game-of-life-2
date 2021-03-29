@@ -1,6 +1,6 @@
 import React from 'react';
 import './grid.css';
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 import { randomRange } from '../utils'
 
 import GridRow from './GridRow.js';
@@ -16,6 +16,8 @@ function GridContainer(props){
             displayRow = {row} 
             key = {randomRange(1,99999999)} 
             rowNum = {index} 
+            thisGrid = {thisGrid}
+            setThisGrid = {setThisGrid}
         />)
     })
     
