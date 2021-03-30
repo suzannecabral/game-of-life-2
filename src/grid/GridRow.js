@@ -1,6 +1,5 @@
 import React from 'react';
 import './grid.css';
-import { randomRange } from '../utils'
 
 import GridSquare from './GridSquare.js';
 

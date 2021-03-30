@@ -1,7 +1,6 @@
 import React from 'react';
 import './grid.css';
-// import { useEffect } from 'react';
-import { randomRange } from '../utils'
+
 
 import GridRow from './GridRow.js';
 
