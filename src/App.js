@@ -1,7 +1,8 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
 import GridContainer from './grid/GridContainer.js'
-import { randomRange } from './utils'
+import ControlDisplay from './controls/ControlDisplay.js';
+import { randomRange } from './utils.js'
 
 function App() {
   
@@ -35,6 +36,7 @@ function App() {
         thisGrid={thisGrid}
         setThisGrid={setThisGrid}
       />
+      <ControlDisplay />
     </div>
   );
 }
