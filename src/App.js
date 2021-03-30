@@ -8,6 +8,7 @@ function App() {
   
   let gridSize = 20;
   const [thisGrid, setThisGrid] = useState([]);
+  const [isPlaying, setIsPlaying] = useState(false);
   
   let grid = [];
   let gridGen = (gridSize) => {
@@ -36,7 +37,10 @@ function App() {
         thisGrid={thisGrid}
         setThisGrid={setThisGrid}
       />
-      <ControlDisplay />
+      <ControlDisplay
+        isPlaying = {isPlaying}
+        setIsPlaying = {setIsPlaying}
+      />
     </div>
   );
 }

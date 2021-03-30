@@ -1,9 +1,7 @@
 import React from 'react';
 import './grid.css';
 
-
 import GridRow from './GridRow.js';
-
 
 function GridContainer(props){
     const {thisGrid, setThisGrid} = props;
