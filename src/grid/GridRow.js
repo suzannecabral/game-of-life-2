@@ -12,7 +12,7 @@ function GridRow(props){
         displaySquares.push(
         <GridSquare 
             square = {square} 
-            key = {randomRange(1,99999999)} 
+            key = {rowNum.toString() + index.toString()} 
             rowNum = {rowNum} 
             squareNum={index} 
             thisGrid = {thisGrid}

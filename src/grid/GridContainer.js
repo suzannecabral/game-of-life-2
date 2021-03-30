@@ -14,7 +14,7 @@ function GridContainer(props){
         displayRows.push(
         <GridRow 
             displayRow = {row} 
-            key = {randomRange(1,99999999)} 
+            key = {index.toString()} 
             rowNum = {index} 
             thisGrid = {thisGrid}
             setThisGrid = {setThisGrid}
